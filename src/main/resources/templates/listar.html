@@ -28,6 +28,7 @@
                   <!--   <th>metros cuadrados</th>
                     <th>nombre paqueadero</th>
                     <th>numero de apartamentos</th> !--> 
+                  <th>Acciones</th>
                 </tr>
              
             </thead>
@@ -41,7 +42,10 @@
                       <td th:text="${edificio.departamento}"></td>
                       <td th:text="${edificio.ciudad}"></td>
                       <td th:text="${edificio.tieneAsensor}"></td>
-                     
+                      <td>  
+                          <button type="submit" class="btn btn-primary">Editar</button>  
+                            <button type="submit" class="btn btn-danger mx-2">Eliminar</button>
+                      </td>
                 </tr>
             </tbody>
         </table>
