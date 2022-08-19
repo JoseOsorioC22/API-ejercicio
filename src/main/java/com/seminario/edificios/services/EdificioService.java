@@ -48,7 +48,6 @@ public class EdificioService {
         edificioAEditar.setTieneZonaSocial(edificio.getTieneZonaSocial());
         
       
-        
         return   edificioRepository.save(edificioAEditar); 
     }
     

@@ -22,25 +22,25 @@ public class Edificio implements Serializable {
     @Column(name = "nombre")
     private String nombre;
     
-    @Column(name = "metrosCuadrados")
+    @Column(name = "metros_cuadrados")
     private Integer metrosCuadrados; 
     
     @Column(name = "altura")
     private Double altura; 
     
-    @Column(name = "numPisos")
+    @Column(name = "num_pisos")
     private Integer numeroPisos; 
     
-    @Column(name = "numApartamentos")
+    @Column(name = "num_apartamentos")
     private Integer numeroApartamentos; 
     
-    @Column(name = "numOficinas")
+    @Column(name = "num_oficinas")
     private Integer numeroOficinas; 
     
-    @Column(name="nomParqueadero")
+    @Column(name="nom_parqueadero")
     private String nombreParqueadero; 
     
-    @Column(name = "numPisinas")
+    @Column(name = "num_pisinas")
     private Integer numeroPiscinas; 
     
     @Column(name = "pais")
@@ -53,13 +53,13 @@ public class Edificio implements Serializable {
     private String ciudad; 
     
     
-    @Column(name = "tieneAsensor")
+    @Column(name = "tiene_asensor")
     private Boolean tieneAsensor; 
     
-    @Column(name = "valorAdministracion")
+    @Column(name = "valor_administracion")
     private Double valorAdministracion; 
     
-    @Column(name = "tienzonaSocial")
+    @Column(name = "tienzona_social")
     private Boolean tieneZonaSocial; 
     
     public Edificio()
