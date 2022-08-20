@@ -45,12 +45,18 @@ public class EdificioController {
     }
     
     
-    
-   @RequestMapping(value = "/editar", method = RequestMethod.PUT )
+    // method = RequestMethod.PUT
+   @RequestMapping(value = "/editar/{id}" )
     @ResponseStatus(HttpStatus.CREATED)
-    public String editarEdificio( Edificio edificio)
+    public String editarEdificio( @PathVariable("id") Integer idEdificio, Model model )
     {
-       return null;
+        Edificio edificio = edificioService.buscarEdificio(idEdificio); 
+        
+        model.addAttribute("titulo", "Editar Edificio"); 
+        model.addAttribute("edificio", edificio); 
+        
+       edificioService.editarEdificio(edificio); 
+       return "agregar"; 
     }
     
     
@@ -72,12 +78,14 @@ public class EdificioController {
         return "listar"; 
     }
     
-    
-    @RequestMapping(value = "/eliminar/{id}", method = RequestMethod.DELETE )
+    //, method = RequestMethod.DELETE
+    @RequestMapping(value = "/eliminar/{id}" )
     @ResponseStatus(HttpStatus.OK)
-    public String eliminarEdificio(@PathVariable Integer id)
+    public String eliminarEdificio(@PathVariable Integer id, Model model )
     {
-       return edificioService.eliminarEdificio(id);
+      edificioService.eliminarEdificio(id);
+        
+      return listarEdificios(model); 
     }
     
     
